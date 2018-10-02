@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2231b0b0-c112-4bee-982d-1cced35bdbce" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/access-denied.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/access-denied.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/candidates.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/checklogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/css/admin_styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/e1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/1466375096_1466316505210-picsay.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/2017_10$largeimg23_Oct_2017_134902631.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/2017_10$largeimg24_Oct_2017_121334433.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/39155773-hospital-wallpapers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/Hopital_Varsovie-hd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/hospital-background-images-hd-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/maxresdefault.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/nhis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/untitled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/hospital/untitledttt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/access.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/base-bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/candidate-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/candidate-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/320x220.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/access.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/access.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/access1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/access2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/bCY7Scu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/background1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/ban-map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/logout.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/backgrounds/wrong.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/gallery/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/gallery/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/imgl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/imgr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/demo/logout.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/logo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/images/logout.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/js/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/js/exporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/js/highcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/js/jquery-1.2.6.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/js/jquery.timers-1.0.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/js/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/scripts/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/scripts/jquery.backtotop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/scripts/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/scripts/jquery.mobilemenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/scripts/jquery.placeholder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fontawesome-4.5.0.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/fonts/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/framework.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/layout/styles/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/manage-admins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/pages/basic-grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/pages/full-width.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/pages/gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/pages/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/pages/sidebar-left.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/pages/sidebar-right.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/positions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/refresh.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/results.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/admin/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/checklogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/css/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/css/user_styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/flash.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/flashin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/1466375096_1466316505210-picsay.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/2017_10$largeimg23_Oct_2017_134902631.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/2017_10$largeimg24_Oct_2017_121334433.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/39155773-hospital-wallpapers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/Hopital_Varsovie-hd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/hospital-background-images-hd-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/maxresdefault.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/nhis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/untitled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/hospital/untitledttt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/base-bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/320x220.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/backgrounds/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/backgrounds/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/backgrounds/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/backgrounds/Obafemi-Awolowo-University-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/backgrounds/background1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/backgrounds/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/backgrounds/logout.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/gallery/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/gallery/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/imgl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/imgr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/demo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/logo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/installation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/js/exporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/js/highcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/js/jquery-1.2.6.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/js/jquery.timers-1.0.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/js/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/scripts/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/scripts/jquery.backtotop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/scripts/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/scripts/jquery.mobilemenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/scripts/jquery.placeholder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fontawesome-4.5.0.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/fonts/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/framework.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/layout/styles/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/manage-profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/pages/basic-grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/pages/full-width.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/pages/gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/pages/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/pages/sidebar-left.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/pages/sidebar-right.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/poll.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/registeracc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/save.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/vote.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med/voter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-2" />
+    <option name="y" value="24" />
+    <option name="width" value="707" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="medicalportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medicalportal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medicalportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medicalportal" type="462c0819:PsiDirectoryNode" />
+              <item name="med" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2231b0b0-c112-4bee-982d-1cced35bdbce" name="Default" comment="" />
+      <created>1538523716007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538523716007</updated>
+      <workItem from="1538523718168" duration="263000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="263000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32917318" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
