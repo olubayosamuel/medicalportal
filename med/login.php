@@ -5,38 +5,27 @@ $sec = "3";
 $message = "Device not yet online";
 $status = 0;
 $patientID = 0;
-require('connection.php');
-
-
+require('db.php');
   $result = mysqli_query($con,"SELECT * FROM validatePrintMed");
 
   while($row = mysqli_fetch_array($result)) {
-  $status =$row['status'] ;
-  $patientID = $row['patient_id'];
+      $status =$row['status'] ;
+      $patientID = $row['patient_id'];
+  }
 
-}
-
-if ($status == 1) {
+  if ($status == 1) {
     $message = "Device online, place the patient's thumb on the scanner";
   }
 
-if ($patientID != 0 ) {
-
-  $res = mysqli_query($con,"SELECT * FROM tbmembers where voter_id = '{$patientID}' " );
-
-  while($row = mysqli_fetch_array($res)) {
-    
-  $patientName =$row['first_name'] ;
-  $patientLastName = $row['last_name'];
-  $message = "Identified patient " . $last_name . " " . $first_name;
- 
-  
-}
-}
-
- ?>
-
-
+  if ($patientID != 0 ) {
+      $res = mysqli_query($con,"SELECT * FROM tbmembers where voter_id = '{$patientID}' " );
+      while($row = mysqli_fetch_array($res)) {
+          $patientName =$row['first_name'] ;
+          $patientLastName = $row['last_name'];
+          $message = "Identified patient " . $last_name . " " . $first_name;
+      }
+  }
+  ?>
 
 <!DOCTYPE html>
 
@@ -54,12 +43,8 @@ if ($patientID != 0 ) {
 
 </head>
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row0">
-  <div id="topbar" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+  <div id="topbar" class="hoc clear">
     <div class="fl_left">
       <ul class="faico clear">
         <li><a class="faicon-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
@@ -80,32 +65,8 @@ if ($patientID != 0 ) {
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row1">
-  <header id="header" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div id="logo" class="fl_left">
-      <h1><a href="index.html">Patient's Portal</a></h1>
-    </div>
-    <!-- ################################################################################################ -->
-    <nav id="mainav" class="fl_right">
-      <ul class="clear">
-        <li class="active"><a href="index.php">Home</a></li>
-        
-       
-      </ul>
-    </nav>
-    <!-- ################################################################################################ -->
-  </header>
 
-
-
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+<?php require('partials/login-header.html') ?>
 
 <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/background1.jpg');">
   <section id="testimonials" class="hoc container clear"> 
@@ -116,100 +77,40 @@ if ($patientID != 0 ) {
         
 
 <?php
-
-        echo "<h2>" . $message . "</h2>";
-        if($patientID != 0){
-
-          mysqli_query($con,"UPDATE validatePrint SET patient_id = 0");
-          header("Location: admin/admin.php");
-        }
+echo "<h2>" . $message . "</h2>";
+if($patientID != 0){
+    mysqli_query($con,"UPDATE validatePrint SET patient_id = 0");
+    header("Location: admin/admin.php");
+}
 ?>
 
-
 <table style="background-color:blue;" width="300" border="0" align="center" cellpadding="0" cellspacing="1">
-<tr>
-<form name="form1" method="post" action="checklogin.php" onSubmit="return loginValidate(this)">
-<td>
-<table style="background-color:red;" width="100%" border="0" cellpadding="3" cellspacing="1" >
+    <tr>
+        <form name="form1" method="post" action="checklogin.php" onSubmit="return loginValidate(this)">
+            <td>
+                <table style="background-color:red;" width="100%" border="0" cellpadding="3" cellspacing="1" >
 
-
+                </table>
+            </td>
+        </form>
+    </tr>
 </table>
-</td>
-</form>
-</tr>
-</table>
-<center>
-<br>Not yet registered? <a href="registeracc.php"><b>Register Here</b></a>
-</center>
-
-        
-      
+          <center>
+              <br>Not yet registered? <a href="registeracc.php"><b>Register Here</b></a>
+          </center>
       </li>
     </ul>
-    <!-- ################################################################################################ -->
   </section>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div class="one_third first">
-      <h6 class="title">Address</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-         
-          <p>
-          Name        : Md. Rezwanul Haque <br>
-          University  : KUET <br>
-          Batch       : 2k14 <br>
-          Dept        : CSE <br>
-          </p>
-          </address>
-        </li>
-      </ul>
-    </div>
 
-    <div class="one_third">
-      <h6 class="title">Phone</h6>
-      <ul class="nospace linklist contact">
-       
-        <li><i class="fa fa-phone"></i> +8801773254014<br>
-          +8801521479574</li>
-
-
-      </ul>
-    </div>
-
-    <div class="one_third">
-      <h6 class="title">Email</h6>
-      <ul class="nospace linklist contact">
-        
-        <li><i class="fa fa-envelope-o"></i> r.haque.249.rh@gmail.com </li>
-
-      </ul>
-    </div>
-
-
-    <!-- ################################################################################################ -->
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+<?php require('partials/footer.html') ?>
 <div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+  <div id="copyright" class="hoc clear">
     <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Md. Rezwanul Haque</a></p>
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>

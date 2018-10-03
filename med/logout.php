@@ -18,12 +18,8 @@
 
 </head>
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row0">
-  <div id="topbar" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+  <div id="topbar" class="hoc clear">
     <div class="fl_left">
       <ul class="faico clear">
         <li><a class="faicon-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
@@ -35,59 +31,36 @@
         <li><a class="faicon-rss" href="https://www.rss.com/"><i class="fa fa-rss"></i></a></li>
       </ul>
     </div>
+
     <div class="fl_right">
       <ul class="nospace inline pushright">
         <li><i class="fa fa-phone"></i> +8801773254014</li>
         <li><i class="fa fa-envelope-o"></i> r.haque.249.rh@gmail.com </li>
       </ul>
     </div>
-    <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row1">
-  <header id="header" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div id="logo" class="fl_left">
-      <h1><a href="index.html">ONLINE VOTING</a></h1>
-    </div>
-    <!-- ################################################################################################ -->
-    <nav id="mainav" class="fl_right">
-      <ul class="clear">
-        <li class="active"><a href="index.php">Home</a></li>
-      
-      </ul>
-    </nav>
-    <!-- ################################################################################################ -->
-  </header>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
+<?php require('partials/logout-header.html')?>
 
 <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/background1.jpg');">
-  <section id="testimonials" class="hoc container clear"> 
-    <!-- ################################################################################################ -->
+  <section id="testimonials" class="hoc container clear">
     <h2 class="font-x3 uppercase btmspace-80 underlined"> Online <a href="#">Voting</a></h2>
     <ul class="nospace group">
       <li class="one_half">
         <blockquote>
+            <div id="page">
+                <div id="header">
+                    <h1>Logged Out Successfully </h1>
+                    <p align="center">&nbsp;</p>
+                </div>
+                <?php
+                session_destroy();
+                ?>
+                You have been successfully logged out.<br><br><br>
+                Return to <a href="login.php">Login</a>
 
-        		<div id="page">
-					<div id="header">
-					<h1>Logged Out Successfully </h1>
-					<p align="center">&nbsp;</p>
-					</div>
-					<?php
-						session_destroy();
-					?>
-					You have been successfully logged out.<br><br><br>
-					Return to <a href="login.php">Login</a>
-
-				</div>
-
+            </div>
         </blockquote>
       
       </li>
@@ -95,67 +68,15 @@
     <!-- ################################################################################################ -->
   </section>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div class="one_third first">
-      <h6 class="title">Address</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-         
-          <p>
-          Name        : Md. Rezwanul Haque <br>
-          University  : KUET <br>
-          Batch       : 2k14 <br>
-          Dept        : CSE <br>
-          </p>
-          </address>
-        </li>
-      </ul>
-    </div>
 
-    <div class="one_third">
-      <h6 class="title">Phone</h6>
-      <ul class="nospace linklist contact">
-       
-        <li><i class="fa fa-phone"></i> +8801773254014<br>
-          +8801521479574</li>
+<?php require('partials/footer.html') ?>
 
-
-      </ul>
-    </div>
-
-    <div class="one_third">
-      <h6 class="title">Email</h6>
-      <ul class="nospace linklist contact">
-        
-        <li><i class="fa fa-envelope-o"></i> r.haque.249.rh@gmail.com </li>
-
-      </ul>
-    </div>
-
-
-    <!-- ################################################################################################ -->
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+  <div id="copyright" class="hoc clear">
     <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Md. Rezwanul Haque</a></p>
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>

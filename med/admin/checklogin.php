@@ -20,7 +20,7 @@ error_reporting(E_ALL);
 
 ob_start();
 session_start();
-//include("connection.php");
+//include("db.php");
 
 $con=mysqli_connect("localhost","root","olalekan","poll");// server, user, pass, database
 

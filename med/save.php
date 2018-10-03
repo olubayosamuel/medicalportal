@@ -1,5 +1,5 @@
 <?php
-		require_once('connection.php');
+		require_once('db.php');
 		$vote = $_REQUEST['vote'];
 
 

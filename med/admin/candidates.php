@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('../connection.php');
+    require('../db.php');
     if(empty($_SESSION['admin_id'])){
       header("location:access-denied.php");
     } 

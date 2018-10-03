@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require('../connection.php');
+	require('../db.php');
 	//If your session isn't valid, it returns you to the login screen for protection
 	if( empty($_SESSION['admin_id']) ){
 	   header("location:access-denied.php");
