@@ -2,7 +2,7 @@
        session_start();
       $myusername = $_SESSION['curname'] ;
       $mypassword = $_SESSION['curpass'] ;
-    require_once('connection.php');
+    require_once('../db.php');
     $myusername = isset($_SESSION['curname'])?$_SESSION['curname']:"" ;
     $mypassword = isset($_SESSION['curpass'])?$_SESSION['curpass']:"" ;
     $encrypted_mypassword=md5($mypassword);

@@ -56,19 +56,14 @@ require('db.php');
         <li><a class="faicon-rss" href="https://www.rss.com/"><i class="fa fa-rss"></i></a></li>
       </ul>
     </div>
-    <div class="fl_right">
-      <ul class="nospace inline pushright">
-        <li><i class="fa fa-phone"></i> +8801773254014</li>
-        <li><i class="fa fa-envelope-o"></i> r.haque.249.rh@gmail.com </li>
-      </ul>
-    </div>
+    
     <!-- ################################################################################################ -->
   </div>
 </div>
 
 <?php require('partials/login-header.html') ?>
 
-<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/background1.jpg');">
+<div class="wrapper bgded overlay" style="background-image:url('hospital/Hopital_Varsovie-hd.jpg');">
   <section id="testimonials" class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <h2 class="font-x3 uppercase btmspace-80 underlined"> Place patient's thumb on the  <a href="#">Scanner</a></h2>
@@ -106,8 +101,7 @@ if($patientID != 0){
 <?php require('partials/footer.html') ?>
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear">
-    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Md. Rezwanul Haque</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">OAU team</a></p>
   </div>
 </div>
 
