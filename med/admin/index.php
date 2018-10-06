@@ -10,7 +10,7 @@ $mypassword = $_SESSION['curpass'] ;
 require_once('../db.php');
 $myusername = isset($_SESSION['curname'])?$_SESSION['curname']:"" ;
 $mypassword = isset($_SESSION['curpass'])?$_SESSION['curpass']:"" ;
-$encrypted_mypassword=md5($mypassword);
+$encrypted_password=md5($mypassword);
 ?>
 <?php
 
@@ -41,11 +41,8 @@ if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
 </head>
 
 <body style="background-image:url('hospital/untitled.png');">
-
-  
-
 <div class="pen-title">
-  <h1>Doctor's Login Form</h1>
+    <h1>Doctor's Login Form</h1>
 </div>
 
 <div class="container" >
@@ -59,20 +56,20 @@ if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
       <div class="input-container">
         <input name="myusername" value="<?php echo $myusername  ?>" type="text" required="required"/>
         <label>Email</label>
-          <span class="error"> Please enter you email.</span>
+          <span class="validationMessage"> Please enter you email.</span>
         <div class="bar"></div>
       </div>
       <div class="input-container">
         <input name="mypassword" value="<?php echo $mypassword ?>" type="password"  required="required"/>
         <label>Password</label>
-          <span class="error"> Please enter you password.</span>
+          <span class="validationMessage"> Please enter you password.</span>
           <div class="bar"></div>
       </div>
 
        <div class="input-container">
         <input name="docName"  type="text" required="required"/>
         <label>Doctor's name</label>
-           <span class="error"> Please enter the name of the doctor.</span>
+           <span class="validationMessage"> Please enter the name of the doctor.</span>
            <div class="bar"></div>
       </div>
         <br/>

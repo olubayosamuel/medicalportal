@@ -5,7 +5,6 @@
     require('connection.php');
    $log1 = $_SESSION['log1'];
    $docName = $_SESSION['docName'];
-   
   
 ?>
 <?php
