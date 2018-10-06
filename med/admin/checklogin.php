@@ -14,21 +14,8 @@
 
 
 <?php
-//session_start();
-ini_set ("display_errors", "1");
-error_reporting(E_ALL);
 
-ob_start();
-session_start();
-//include("db.php");
-
-$con=mysqli_connect("localhost","root","olalekan","poll");// server, user, pass, database
-
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
+require('../db.php');
 
 $tbl_name="tbAdministrators"; // Table name
 

@@ -1,17 +1,22 @@
 <?php
-       session_start();
-      $myusername = $_SESSION['curname'] ;
-      $mypassword = $_SESSION['curpass'] ;
-    require_once('../db.php');
-    $myusername = isset($_SESSION['curname'])?$_SESSION['curname']:"" ;
-    $mypassword = isset($_SESSION['curpass'])?$_SESSION['curpass']:"" ;
-    $encrypted_mypassword=md5($mypassword);
+//Start session
+session_start();
+if(isset($_SESSION['curname']) && isset($_SESSION['curpass'])) {
+$myusername = $_SESSION['curname'] ;
+$mypassword = $_SESSION['curpass'] ;
+}
+
+//DB connection
+require_once('../db.php');
+$myusername = isset($_SESSION['curname'])?$_SESSION['curname']:"" ;
+$mypassword = isset($_SESSION['curpass'])?$_SESSION['curpass']:"" ;
+$encrypted_mypassword=md5($mypassword);
 ?>
 <?php
-      if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
-          header("Location:admin.php");
-          exit;
-      }
+if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
+    header("Location:admin.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
