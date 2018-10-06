@@ -13,9 +13,6 @@
 
 </head>
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row0">
   <div id="topbar" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -49,12 +46,9 @@
     <ul class="nospace group">
       <li class="one_half">
         <blockquote>This portal allows the medical expert to have acess to the medical history of the patients including previous medical tests, blood group, medications, allegies and other relevant information. The patient can register on this portal. every tests result of ech patient is reported on this portal and made available to all licenced andd registered doctors in every state in the country. Doctors can also add their own treatment scheme on the patients to the medical history section with date stamp</blockquote>
-      
       </li>
 
-      
     </ul>
-    <!-- ################################################################################################ -->
   </section>
 </div>
 
@@ -68,9 +62,7 @@
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>

@@ -1,12 +1,3 @@
-<?php  
-    function redirect($newLocation){
-
-    header("Location: " . $newLocation);
-    exit;
-}
-
-?>
-
 <!DOCTYPE html>
 
 <html>

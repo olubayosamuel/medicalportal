@@ -13,8 +13,10 @@ $mypassword = isset($_SESSION['curpass'])?$_SESSION['curpass']:"" ;
 $encrypted_mypassword=md5($mypassword);
 ?>
 <?php
+
+require('redirect.php');
 if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
-    header("Location:admin.php");
+    redirect('admin.php');
     exit;
 }
 ?>
