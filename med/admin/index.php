@@ -53,23 +53,27 @@ if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
 
   <div class="card">
     <h1 class="title">Login</h1>
+      <center id="validationMessage"></center>
     <form name="form1" action="checklogin.php" method="post" onsubmit="return loginValidate(this)">
 
       <div class="input-container">
         <input name="myusername" value="<?php echo $myusername  ?>" type="text" required="required"/>
         <label>Email</label>
+          <span class="error"> Please enter you email.</span>
         <div class="bar"></div>
       </div>
       <div class="input-container">
         <input name="mypassword" value="<?php echo $mypassword ?>" type="password"  required="required"/>
         <label>Password</label>
-        <div class="bar"></div>
+          <span class="error"> Please enter you password.</span>
+          <div class="bar"></div>
       </div>
 
        <div class="input-container">
         <input name="docName"  type="text" required="required"/>
         <label>Doctor's name</label>
-        <div class="bar"></div>
+           <span class="error"> Please enter the name of the doctor.</span>
+           <div class="bar"></div>
       </div>
         <br/>
       <center><tr><td colspan="2" align="center"><input type="checkbox" name="remember" value="1"> <font color="blue">Remember Me</font></td></tr></center><br>

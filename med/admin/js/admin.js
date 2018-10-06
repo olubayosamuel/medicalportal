@@ -21,11 +21,11 @@ function loginValidate(loginForm){
     }
     if(!validationVerified)
     {
-        alert(errorMessage);
+        document.getElementById("validationMessage").innerHTML = errorMessage;
     }
     if(validationVerified)
     {
-        alert(okayMessage);
+        document.getElementById("validationMessage").innerHTML = "Login Successful";
     }
     return validationVerified;
 }
