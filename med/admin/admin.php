@@ -21,7 +21,7 @@
         }
         else 
         {
-           echo '<img src="e1.jpg" width="100%" height="100%"  />';  /* here goes the page when destroy the cookies */
+           echo '<img src="images/e1.jpg" width="100%" height="100%"  />';  /* here goes the page when destroy the cookies */
            exit;
         }
 ?>
