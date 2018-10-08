@@ -1,12 +1,14 @@
-
 <?php
     session_start();
    $log1=0;
-    require('connection.php');
-   $log1 = $_SESSION['log1'];
-   $docName = $_SESSION['docName'];
+  require('../db.php');
+  if($_SESSION) {
+    $log1 = $_SESSION['log1'];
+    $docName = $_SESSION['docName'];
+  }
   
 ?>
+
 <?php
       if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
             $curnam = $_SESSION['curname'];

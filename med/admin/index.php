@@ -2,8 +2,11 @@
 //Start session
 session_start();
 if(isset($_SESSION['curname']) && isset($_SESSION['curpass'])) {
-$myusername = $_SESSION['curname'] ;
-$mypassword = $_SESSION['curpass'] ;
+  $myusername = $_SESSION['curname'] ;
+  $mypassword = $_SESSION['curpass'] ;
+} elseif (isset($_COOKIE['$email']) && $_COOKIE['$pass']){
+  $curnam = $_SESSION['curname'];
+  $curpas = $_SESSION['curpass'];
 }
 
 //DB connection
@@ -11,13 +14,10 @@ require_once('../db.php');
 $myusername = isset($_SESSION['curname'])?$_SESSION['curname']:"" ;
 $mypassword = isset($_SESSION['curpass'])?$_SESSION['curpass']:"" ;
 $encrypted_password=md5($mypassword);
-?>
-<?php
 
 require('redirect.php');
 if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
     redirect('admin.php');
-    exit;
 }
 ?>
 
@@ -28,16 +28,13 @@ if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
   <title>Admin Login Form</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
-      <script language="JavaScript" src="js/admin.js">
-  </script>
+<script language="JavaScript" src="js/admin.js"></script>
 
-  
 </head>
 
 <body style="background-image:url('hospital/untitled.png');">
@@ -51,7 +48,7 @@ if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
   <div class="card">
     <h1 class="title">Login</h1>
       <center id="validationMessage"></center>
-    <form name="form1" action="checklogin.php" method="post" onsubmit="return loginValidate(this)">
+    <form name="form1" action="checklogin" method="post" onsubmit="return loginValidate(this)">
 
       <div class="input-container">
         <input name="myusername" value="<?php echo $myusername  ?>" type="text" required="required"/>
