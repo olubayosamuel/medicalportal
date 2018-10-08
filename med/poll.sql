@@ -84,6 +84,24 @@ INSERT INTO `tbcandidates` (`candidate_id`, `candidate_name`, `candidate_positio
 (18, 'sampam', 'Executive-Officer', 1),
 (19, 'mary', 'Executive-Officer', 0);
 
+
+------------------------------------------
+--
+-- Table structure for patient table
+--
+------------------------------------------
+DROP TABLE IF EXISTS `patients`;
+CREATE TABLE IF NOT EXISTS `patients` (
+  `firstname` varchar(50) NON NULL,
+  `lastname` varchar (50) NON NULL,
+  `age` varchar (50) NON NULL,
+  `sex` varchar (50) NON NULL,
+  `bloodgroup` varchar (50) NON NULL,
+  `genotype` varchar (50) NON NULL,
+  `allegies` varchar (50) NULLABLE,
+  `address` varchar (50) NON NULL,
+  `phone` varchar (50) NON NULL,
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1
 -- --------------------------------------------------------
 
 --
