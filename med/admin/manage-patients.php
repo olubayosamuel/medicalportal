@@ -64,7 +64,7 @@
   </div>
 </div>
 
-<?php require('partials/admin_header.html')?>
+<?php require('partials/admin_manage_patient_header.html') ?>
 
 <div class="wrapper bgded overlay" style="background-image:url('hospital/1.jpg');">
   <section id="testimonials" class="hoc container clear"> 
