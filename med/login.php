@@ -5,25 +5,22 @@ $sec = "3";
 $message = "Device not yet online";
 $status = 0;
 $patientID = 0;
+require('admin/redirect.php');
 require('db.php');
-  $result = mysqli_query($con,"SELECT * FROM validatePrintMed");
+  $result = mysqli_query($con,"SELECT * FROM validateprint");
 
   while($row = mysqli_fetch_array($result)) {
       $status =$row['status'] ;
-      $patientID = $row['patient_id'];
+      $patientID = $row['print_id'];
   }
 
   if ($status == 1) {
     $message = "Device online, place the patient's thumb on the scanner";
   }
-
   if ($patientID != 0 ) {
-      $res = mysqli_query($con,"SELECT * FROM tbmembers where voter_id = '{$patientID}' " );
-      while($row = mysqli_fetch_array($res)) {
-          $patientName =$row['first_name'] ;
-          $patientLastName = $row['last_name'];
-          $message = "Identified patient " . $last_name . " " . $first_name;
-      }
+    $_SESSION['patient-id'] = $patientID;
+        redirect('admin/manage-patient.php');
+        exit;
   }
   ?>
 

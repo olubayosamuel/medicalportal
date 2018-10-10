@@ -83,31 +83,22 @@ else
 
 <?php require('partials/admin_manage_patient_header.html') ?>
 
-<div class="wrapper bgded overlay" style="background-image:url('hospital/manage.jpg');">
+<div class="wrapper overlay" style="background-image:url('hospital/manage.jpg'); height: 500px">
 
     <center>
+    <div style="height: 200px"></div>
         <form name=patient action="FetchPatientById.php" method="post">
-            <input type="submit" value="Go to Login">
-        </form>
-        <div class="row">
-            <div class="input-container">
-                <input name="patientId"  type="text" required="required"/>
+            <input name="patient"  type="text" required="required" style="color: #000000" />
                 <label>Patient Id</label>
                 <span class="validationMessage"> Enter the id of the patient to fetch </span>
-                <div class="bar"></div>
-            </div>
+
+                <div class="button-container">
+            <button name="Submit" style="color: #000000"><span>Fetch Patient</span></button>
         </div>
-
-        <div class="button-container">
-
-            <button name="Submit"><span>Fetch Patient</span></button>
-
-        </div>
+        </form>
     </center>
 
 </div>
-
-<?php require('partials/admin_footer.html')?>
 
 <div class="wrapper row5">
     <div id="copyright" class="hoc clear">
