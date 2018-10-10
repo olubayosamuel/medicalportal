@@ -139,6 +139,7 @@ function myFunction() {
         <th style="color:#000000"; width="70">Allegies</td>
         <th style="color:#000000"; width="120">Address</td>
         <th style="color:#000000"; width="50">Phone</td>
+        <th style="color:#000000"; width="50">Registration ID</td>
 
         </tr>
 
@@ -153,6 +154,7 @@ function myFunction() {
               <td style="color:#000000"; width="70">' . $patient['allegies'] . '</td>
               <td style="color:#000000"; width="200">' . $patient['address'] . '</td>
               <td style="color:#000000"; width="50">' . $patient['phone'] . '</td>
+              <td style="color:#000000"; width="50">' . $patient['patient_reg_id'] . '</td>
           </tr>';
           }
         ?>
@@ -162,12 +164,10 @@ function myFunction() {
   </section>
 </div>
 
-<?php require('partials/admin_footer.html')?>
 
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
-    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Md. Rezwanul Haque</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved</p>
   </div>
 </div>
 
