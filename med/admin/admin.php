@@ -1,13 +1,14 @@
-
 <?php
     session_start();
    $log1=0;
-    require('connection.php');
-   $log1 = $_SESSION['log1'];
-   $docName = $_SESSION['docName'];
-   
+  require('../db.php');
+  if($_SESSION) {
+    $log1 = $_SESSION['log1'];
+    $docName = $_SESSION['docName'];
+  }
   
 ?>
+
 <?php
       if(isset($_COOKIE['$email']) && $_COOKIE['$pass']){
             $curnam = $_SESSION['curname'];
@@ -20,7 +21,7 @@
         }
         else 
         {
-           echo '<img src="e1.jpg" width="100%" height="100%"  />';  /* here goes the page when destroy the cookies */
+           echo '<img src="images/e1.jpg" width="100%" height="100%"  />';  /* here goes the page when destroy the cookies */
            exit;
         }
 ?>
@@ -63,28 +64,8 @@
   </div>
 </div>
 
-<div class="wrapper row1">
-  <header id="header" class="hoc clear"> 
-    <div id="logo" class="fl_left">
-      <h1><a href="index.php">Welcome Doctor!</a></h1>
-    </div>
-    <nav id="mainav" class="fl_right">
-      <ul class="clear">
-        <li class="active"><a href="admin.php">Home</a></li>
-        <li><a class="drop" href="#">Doctor's Panel Pages</a>
-          <ul>
-            <li><a href="http://localhost:8080/medicalPortal/med/login.php">Manage patients</a></li>
-            <li><a href="positions.php">patient's lists</a></li>
-           </ul>
-        </li>
-        
-        <li><a href="http://localhost:8080/medicalPortal/med/index.php">main page</a></li>
-        <li><a href="logout.php">Logout</a></li>
+<?php require('partials/admin_welcome_header.html') ?>
 
-      </ul>
-    </nav>
-  </header>
-</div>
 <div class="wrapper bgded overlay" style="background-image:url('hospital/1.jpg');">
   <section id="testimonials" class="hoc container clear"> 
    
@@ -102,48 +83,7 @@
   </section>
 </div>
 
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
-   
-    <div class="one_third first">
-      <h6 class="title">Address</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-         
-          <p>
-          Name        : Md. Rezwanul Haque <br>
-          University  : KUET <br>
-          Batch       : 2k14 <br>
-          Dept        : CSE <br>
-          </p>
-          </address>
-        </li>
-      </ul>
-    </div>
-
-    <div class="one_third">
-      <h6 class="title">Phone</h6>
-      <ul class="nospace linklist contact">
-       
-        <li><i class="fa fa-phone"></i> +8801773254014<br>
-          +8801521479574</li>
-
-
-      </ul>
-    </div>
-
-    <div class="one_third">
-      <h6 class="title">Email</h6>
-      <ul class="nospace linklist contact">
-        
-        <li><i class="fa fa-envelope-o"></i> r.haque.249.rh@gmail.com </li>
-
-      </ul>
-    </div>
-
-  </footer>
-</div>
+<?php require('partials/admin_footer.html')?>
 
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 

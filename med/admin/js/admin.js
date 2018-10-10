@@ -1,33 +1,32 @@
 //function to handle login-form validation
 function loginValidate(loginForm){
 
-var validationVerified=true;
-var errorMessage="";
-var okayMessage="click OK to continue";
+    var validationVerified=true;
+    var errorMessage="";
 
-if (loginForm.myusername.value=="")
-{
-    errorMessage+="Email not filled!\n";
-    validationVerified=false;
-}
-if(loginForm.mypassword.value=="")
-{
-    errorMessage+="Password not filled!\n";
-    validationVerified=false;
-}
-if (!isValidEmail(loginForm.myusername.value)) {
-    errorMessage+="Invalid email address provided!\n";
-    validationVerified=false;
-}
-if(!validationVerified)
-{
-    alert(errorMessage);
-}
-if(validationVerified)
-{
-    alert(okayMessage);
-}
-return validationVerified;
+    if (loginForm.myusername.value=="")
+    {
+        errorMessage+="Email not filled!\n";
+        validationVerified=false;
+    }
+    if(loginForm.mypassword.value=="")
+    {
+        errorMessage+="Password not filled!\n";
+        validationVerified=false;
+    }
+    if (!isValidEmail(loginForm.myusername.value)) {
+        errorMessage+="Invalid email address provided!\n";
+        validationVerified=false;
+    }
+    if(!validationVerified)
+    {
+        document.getElementById("validationMessage").innerHTML = errorMessage;
+    }
+    if(validationVerified)
+    {
+        document.getElementById("validationMessage").innerHTML = "Login Successful";
+    }
+    return validationVerified;
 }
 
 //function to handle register-form validation

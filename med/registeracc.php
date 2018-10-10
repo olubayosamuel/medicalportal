@@ -14,12 +14,8 @@
 
 </head>
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row0">
-  <div id="topbar" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+  <div id="topbar" class="hoc clear">
     <div class="fl_left">
       <ul class="faico clear">
         <li><a class="faicon-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
@@ -37,36 +33,23 @@
         <li><i class=></i> info@portal.com </li>
       </ul>
     </div>
-    <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row1">
-  <header id="header" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+  <header id="header" class="hoc clear">
     <div id="logo" class="fl_left">
-      <h1><a href="index.php">Portal</a></h1>
+      <h1><a href="index.php">Patient's Portal</a></h1>
     </div>
-    <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="index.php">Home</a></li>
-        
-        
       </ul>
     </nav>
-    <!-- ################################################################################################ -->
   </header>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 
 <div class="wrapper bgded overlay" style="background-image:url('hospital/10.jpg');">
-  <section id="testimonials" class="hoc container clear"> 
-    <!-- ################################################################################################ -->
+  <section id="testimonials" class="hoc container clear">
     <h2 class="font-x3 uppercase btmspace-80 underlined"> Patient's <a href="#">portal</a></h2>
     <ul class="nospace group">
       <li class="one_half">
@@ -75,7 +58,7 @@
 
 <div  >
   <?php
-  	require('connection.php');
+  	require('db.php');
   	//Process
   	if (isset($_POST['submit']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['voter_num']))
   	{
@@ -84,23 +67,15 @@
   		$myLastName = addslashes( $_POST['lastname'] ); //prevents types of SQL injection
   		$myVoterid = $_POST['voter_num'];
 
-  		
-
-   
   		$sql = mysqli_query( $con, "INSERT INTO tbMembers(first_name, last_name, voter_id) VALUES ('$myFirstName','$myLastName',$myVoterid')" );
-
-
-
 
   	die( "You have registered for an account.<br><br>Go to <a href=\"index.php\">main page</a>" );
   	}
 
-
   	echo "<center><h3>Register an account by filling in the needed information below:</h3></center>";
-  	
   ?>
 </div> 
-		<table style="background-color:powderblue;" width="300" border="0" align="center" cellpadding="0" cellspacing="1">
+		<table style="background-color:powderblue;" width="50%" border="0" align="center" cellpadding="0" cellspacing="1">
 <tr>
 <form name="form1" method="post" action="registeracc.php" onSubmit="return registerValidate(this)">
 <td>
@@ -139,77 +114,22 @@
 <center>
 <br>Go back to the  <a href="index.php"><b>main page</b></a>
 </center>
-
-
-
         </blockquote>
-      
       </li>
     </ul>
-    <!-- ################################################################################################ -->
   </section>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div class="one_third first">
-      <h6 class="title">Address</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-         
-          <p>
-          Name        : Md. Rezwanul Haque <br>
-          University  : KUET <br>
-          Batch       : 2k14 <br>
-          Dept        : CSE <br>
-          </p>
-          </address>
-        </li>
-      </ul>
-    </div>
 
-    <div class="one_third">
-      <h6 class="title">Phone</h6>
-      <ul class="nospace linklist contact">
-       
-        <li><i class="fa fa-phone"></i> +8801773254014<br>
-          +8801521479574</li>
+<?php require('partials/footer.html') ?>
 
-
-      </ul>
-    </div>
-
-    <div class="one_third">
-      <h6 class="title">Email</h6>
-      <ul class="nospace linklist contact">
-        
-        <li><i class="fa fa-envelope-o"></i> r.haque.249.rh@gmail.com </li>
-
-      </ul>
-    </div>
-
-
-    <!-- ################################################################################################ -->
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+
     <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Md. Rezwanul Haque</a></p>
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <!-- ################################################################################################ -->
+
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>

@@ -13,9 +13,6 @@
 
 </head>
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row0">
   <div id="topbar" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -39,42 +36,8 @@
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row1">
-  <header id="header" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div id="logo" class="fl_left">
-      <h1><a href="index.php">NHIS Medical Portal</a></h1>
-    </div>
-    <!-- ################################################################################################ -->
-    <nav id="mainav" class="fl_right">
-      <ul class="clear">
-        <li class="active"><a href="index.php">Home</a></li>
-        <li><a class="drop" href="#">Practitional pages</a>
-          <ul>
-            <li><a href="admin/index.php">Doctor Login</a></li>
-           
-            
-          </ul>
-        </li>
-        <li><a class="drop" href="#">Patient's manager</a>
-          <ul>
-           
-            <li><a href="registeracc.php">Register New patient</a></li>
-            
-          </ul>
-        </li>
-       
-      </ul>
-    </nav>
-    <!-- ################################################################################################ -->
-  </header>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
+<?php require('partials/header.html') ?>
 
 <div class="wrapper bgded overlay" style="background-image:url('hospital/Hopital_Varsovie-hd.jpg');">
   <section id="testimonials" class="hoc container clear"> 
@@ -83,63 +46,14 @@
     <ul class="nospace group">
       <li class="one_half">
         <blockquote>This portal allows the medical expert to have acess to the medical history of the patients including previous medical tests, blood group, medications, allegies and other relevant information. The patient can register on this portal. every tests result of ech patient is reported on this portal and made available to all licenced andd registered doctors in every state in the country. Doctors can also add their own treatment scheme on the patients to the medical history section with date stamp</blockquote>
-      
       </li>
 
-      
     </ul>
-    <!-- ################################################################################################ -->
   </section>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div class="one_third first">
-      <h6 class="title">Address</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-         
-          <p>
-          Name        : Team Greenity <br>
-          University  : Obafemi Awolowo University <br>
-          Dept        : Electronic and Electrical Engineering <br>
-          </p>
-          </address>
-        </li>
-      </ul>
-    </div>
 
-    <div class="one_third">
-      <h6 class="title">Phone</h6>
-      <ul class="nospace linklist contact">
-       
-        <li><i class="fa fa-phone"></i> +8801773254014<br>
-          +8801521479574</li>
+<?php require('partials/footer.html')?>
 
-
-      </ul>
-    </div>
-
-    <div class="one_third">
-      <h6 class="title">Medical portal</h6>
-      <ul class="nospace linklist contact">
-        
-        <li><i class="fa fa-envelope-o"></i> NHIS </li>
-
-      </ul>
-    </div>
-
-
-    <!-- ################################################################################################ -->
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -148,9 +62,7 @@
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>

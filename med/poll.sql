@@ -1,10 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Oct 09, 2018 at 10:18 PM
+-- Server version: 5.7.19
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `poll`
@@ -13,9 +25,38 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `patients`
+--
+
+DROP TABLE IF EXISTS `patients`;
+CREATE TABLE IF NOT EXISTS `patients` (
+  `patient_id` int(10) NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `age` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `bloodgroup` varchar(45) NOT NULL,
+  `genotype` varchar(45) NOT NULL,
+  `allegies` varchar(128) NOT NULL,
+  `address` varchar(128) NOT NULL,
+  `phone` varchar(45) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `patients`
+--
+
+INSERT INTO `patients` (`patient_id`, `firstname`, `lastname`, `age`, `sex`, `bloodgroup`, `genotype`, `allegies`, `address`, `phone`) VALUES
+(2, 'ayomiposi', 'Oluwasunmisola', '29', 'male', 'Group B', 'AA', 'Cooked beans', 'No 5, ayeteru street, araromi community, Lagos State, Nigeria', '07033902535'),
+(1, 'oluwapelumi', 'olubayo', '12', 'female', 'Group O', 'AS', 'Sucrose intolerance', 'No 5, igbalaye street, Osun State, Nigeria', '07069441260');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbadministrators`
 --
 
+DROP TABLE IF EXISTS `tbadministrators`;
 CREATE TABLE IF NOT EXISTS `tbadministrators` (
   `admin_id` int(5) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) NOT NULL,
@@ -23,29 +64,31 @@ CREATE TABLE IF NOT EXISTS `tbadministrators` (
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbadministrators`
 --
 
 INSERT INTO `tbadministrators` (`admin_id`, `first_name`, `last_name`, `email`, `password`) VALUES
-(1, 'Olusegun', 'Gyibrilla', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3');
+(1, 'Olusegun', 'Gyibrilla', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3'),
+(5, 'sam', 'olu', 'olubayosamuelolalekan@gmail.com', '3935bfa0eaf624700f0cd1c6bf0b1038'),
+(10, 'samuel', 'olalekan', 'olubayosamuelolalekan@gmail.com', '3935bfa0eaf624700f0cd1c6bf0b1038');
 
 -- --------------------------------------------------------
-
 
 --
 -- Table structure for table `tbcandidates`
 --
 
+DROP TABLE IF EXISTS `tbcandidates`;
 CREATE TABLE IF NOT EXISTS `tbcandidates` (
   `candidate_id` int(5) NOT NULL AUTO_INCREMENT,
   `candidate_name` varchar(45) NOT NULL,
   `candidate_position` varchar(45) NOT NULL,
   `candidate_cvotes` int(11) NOT NULL,
   PRIMARY KEY (`candidate_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbcandidates`
@@ -53,23 +96,68 @@ CREATE TABLE IF NOT EXISTS `tbcandidates` (
 
 INSERT INTO `tbcandidates` (`candidate_id`, `candidate_name`, `candidate_position`, `candidate_cvotes`) VALUES
 (1, 'Mamun', 'PRESIDENT', 0),
-(2, 'Emran', 'PRESIDENT', 0),
-(3, 'Sabuj', 'VICE-PRESIDENT', 0),
-(4, 'Sajedul', 'VICE-PRESIDENT', 0);
+(2, 'Emran', 'PRESIDENT', 1),
+(3, 'Sabuj', 'VICE-PRESIDENT', 1),
+(4, 'Sajedul', 'VICE-PRESIDENT', 0),
+(5, 'Ibrahim', 'Chairman', 0),
+(8, 'tobi', 'Secretary', 1),
+(9, 'ade', 'Vice-Secretary', 1),
+(10, 'seun', 'Treasurer', 1),
+(11, 'wande', 'Vice-Treasurer', 1),
+(12, 'titi', 'Member', 1),
+(13, 'yemi', 'Woman-Member', 0),
+(14, 'igneous', 'Woman-Member', 1),
+(15, 'sia', 'Chairman', 1),
+(17, 'bolt', 'Organizing-Secretary', 1),
+(18, 'sampam', 'Executive-Officer', 1),
+(19, 'mary', 'Executive-Officer', 0);
 
 -- --------------------------------------------------------
 
+--
+-- Table structure for table `tbmembers`
+--
 
+DROP TABLE IF EXISTS `tbmembers`;
+CREATE TABLE IF NOT EXISTS `tbmembers` (
+  `member_id` int(5) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `voter_id` varchar(128) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `haveVote` int(11) NOT NULL,
+  PRIMARY KEY (`member_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbmembers`
+--
+
+INSERT INTO `tbmembers` (`member_id`, `first_name`, `last_name`, `voter_id`, `email`, `password`, `haveVote`) VALUES
+(1, 'Md. Rezwanul', 'Haque', '14', 'rezwan@gmail.com', '7d9b087beffc9879ead55e7291d6b541', 0),
+(2, 'Mahbub', 'Alam', '43', 'mahbub@gmail.com', '939d2ad38c88fda9c0bad11086e4e057', 0),
+(3, 'samuel', 'olubayo', '123', 'olusam@gmail.com', '3935bfa0eaf624700f0cd1c6bf0b1038', 0),
+(4, 'samuel', 'olalekan', '23', 'olubayosamuelolalekan@gmail.com', '3935bfa0eaf624700f0cd1c6bf0b1038', 1),
+(5, 'don', 'tac', '30', 'bigsam@gmail.com', '3935bfa0eaf624700f0cd1c6bf0b1038', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbparty`
+--
+
+DROP TABLE IF EXISTS `tbparty`;
 CREATE TABLE IF NOT EXISTS `tbparty` (
   `party_id` int(5) NOT NULL AUTO_INCREMENT,
   `party_name` varchar(45) NOT NULL,
   `party_position` varchar(45) NOT NULL,
   `party_cvotes` int(11) NOT NULL,
   PRIMARY KEY (`party_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbcandidates`
+-- Dumping data for table `tbparty`
 --
 
 INSERT INTO `tbparty` (`party_id`, `party_name`, `party_position`, `party_cvotes`) VALUES
@@ -78,248 +166,81 @@ INSERT INTO `tbparty` (`party_id`, `party_name`, `party_position`, `party_cvotes
 (3, 'Accord party', 'VICE-PRESIDENT', 0),
 (4, 'ACN', 'VICE-PRESIDENT', 0);
 
-
-
---
--- Table structure for table `tbmembers`
---
-
-CREATE TABLE IF NOT EXISTS `tbmembers` (
-  `member_id` int(5) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `voter_id` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
-  PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `tbmembers`
---
-
-INSERT INTO `tbmembers` (`member_id`, `first_name`, `last_name`, `email`, `voter_id`, `password`) VALUES
-(1, 'Md. Rezwanul', 'Haque', 'rezwan@gmail.com', '19964714075000192', '7d9b087beffc9879ead55e7291d6b541'),
-(2, 'Mahbub', 'Alam', 'mahbub@gmail.com', '19864714075000186', '939d2ad38c88fda9c0bad11086e4e057');
-
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `tbpositions`
 --
 
+DROP TABLE IF EXISTS `tbpositions`;
 CREATE TABLE IF NOT EXISTS `tbpositions` (
   `position_id` int(5) NOT NULL AUTO_INCREMENT,
   `position_name` varchar(45) NOT NULL,
+  `voteStatus` int(3) NOT NULL,
   PRIMARY KEY (`position_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbpositions`
 --
 
-INSERT INTO `tbpositions` (`position_id`, `position_name`) VALUES
-(1, 'PRESIDENT'),
-(2, 'VICE-PRESIDENT'),
-(3, 'Secretary'),
-(4, 'Vice-Secretary'),
-(5, 'Organizing-Secretary'),
-(6, 'Treasurer'),
-(7, 'Vice-Treasurer'),
-(8, 'Member'),
-(9, 'Woman-Member');
+INSERT INTO `tbpositions` (`position_id`, `position_name`, `voteStatus`) VALUES
+(1, 'PRESIDENT', 0),
+(2, 'VICE-PRESIDENT', 0),
+(3, 'Secretary', 0),
+(4, 'Vice-Secretary', 0),
+(5, 'Organizing-Secretary', 0),
+(6, 'Treasurer', 0),
+(7, 'Vice-Treasurer', 0),
+(8, 'Member', 0),
+(9, 'Woman-Member', 0),
+(10, 'Chairman', 0),
+(11, 'Executive-Officer', 0);
 
+-- --------------------------------------------------------
 
-CREATE TABLE multisoniictable (
-	sn INT(11) NOT NULL AUTO_INCREMENT,
-	Tdate CHAR(30) NOT NULL,
-	Ttime CHAR(30) NOT NULL,
-	sensor1 CHAR(30) NOT NULL,
-	sensor2 CHAR(30) NOT NULL,
-	sensor3 CHAR(30) NOT NULL,
-	sensor4 CHAR(30) NOT NULL,
-	PRIMARY KEY (sn)
-);
-// Create connection to SQL database
-$con= mysqli_connect("localhost","id5399043_sensordb","olalekan","id5399043_sensorlog");// server, user, pass, database
+--
+-- Table structure for table `validateprint`
+--
 
+DROP TABLE IF EXISTS `validateprint`;
+CREATE TABLE IF NOT EXISTS `validateprint` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `status` int(5) NOT NULL,
+  `print_id` int(5) NOT NULL,
+  `info` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-	<tr>
-	<td style="color:#000000"; width="120" >Voter Id</td>
-	<td style="color:#000000"; width="6">:</td>
-	<td style="color:#000000"; width="294"><input name="voter_id" type="text" ></td>
-	</tr>
+--
+-- Dumping data for table `validateprint`
+--
 
+INSERT INTO `validateprint` (`id`, `status`, `print_id`, `info`) VALUES
+(1, 1, 23, 'this is the patient we are talking about');
 
-<tr>
-  <td style="color:#000000"; width="120" >ID Number</td>
-  <td style="color:#000000"; width="6">:</td>
-  <td style="color:#000000"; width="294"><input name="id_no" type="text" ></td>
-  </tr>
+-- --------------------------------------------------------
 
-   <div><?php
-        
-        $result = mysqli_query($con,"SELECT * FROM multisoniictable");//table select
-        
-        while($row = mysqli_fetch_array($result)) {
+--
+-- Table structure for table `validateprintmed`
+--
 
-  echo "<tr>";
-  $sn_id = $row['sn'];
-$currentDate = $row['Tdate'];
-$currentTime = $row['Ttime'];
-$sensorData1 = $row['temperature'];
-$sensorData2 = $row['humidity'];
-$sensorData3 = $row['batteryVoltage'];
-$sensorData4 = $row['AC1'];
-$sensorData5 = $row['AC2'];
-$sensorData6 = $row['AC3'];
-$sensorData7 = $row['Current'];
+DROP TABLE IF EXISTS `validateprintmed`;
+CREATE TABLE IF NOT EXISTS `validateprintmed` (
+  `id` int(11) NOT NULL,
+  `status` int(11) DEFAULT NULL,
+  `patient_id` int(11) DEFAULT NULL,
+  `info` text
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-        
-    ?></div>
-   
+--
+-- Dumping data for table `validateprintmed`
+--
 
+INSERT INTO `validateprintmed` (`id`, `status`, `patient_id`, `info`) VALUES
+(1, 0, 0, 'the real nigga');
+COMMIT;
 
-
-
-
-
-   
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Home</title>
-	<base href="{{base_url}}" />
-			<meta name="viewport" content="width=1200" />
-		<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<!-- Facebook Open Graph -->
-	<meta name="og:title" content="Home" />
-	<meta name="og:description" content="" />
-	<meta name="og:image" content="" />
-	<meta name="og:type" content="article" />
-	<meta name="og:url" content="{{curr_url}}" />
-	<!-- Facebook Open Graph end -->
-		
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/main.js?v=20180416101217" type="text/javascript"></script>
-
-	<link href="css/font-awesome/font-awesome.min.css?v=4.7.0" rel="stylesheet" type="text/css" />
-	<link href="css/site.css?v=20180416101220" rel="stylesheet" type="text/css" />
-	<link href="css/common.css?ts=1523961466" rel="stylesheet" type="text/css" />
-	<link href="css/1.css?ts=1523961466" rel="stylesheet" type="text/css" />
-	<ga-code/>
-	<script type="text/javascript">var currLang = '';</script>	
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.min.js"></script>
-	<![endif]-->
-</head>
-
-
-<body>
-    
-    
-<div><?php 
-$con = mysqli_connect("localhost","id5399043_sensordb","olalekan","id5399043_sensorlog");// server, user, pass, database
-
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-        
-        $result = mysqli_query($con,"SELECT * FROM pageTable");//table select
-        
-        while($row = mysqli_fetch_array($result)) {
-
-
-$currentDate = $row['Tdate'];
-$currentTime = $row['Ttime'];
-$sensorData1 = $row['temperature'];
-$sensorData2 = $row['humidity'];
-$sensorData3 = $row['batteryVoltage'];
-$sensorData4 = $row['AC1'];
-$sensorData5 = $row['AC2'];
-$sensorData6 = $row['AC3'];
-$sensorData7 = $row['Current'];
-    }
-        
-    ?> </div>
-
-    
-  
-    
-    
-    
-    
-    <div class="root"><div class="vbox wb_container" id="wb_header">
-	
-<div class="wb_cont_inner"><div id="wb_element_instance0" class="wb_element" style=" line-height: normal;"><h4 class="wb-stl-pagetitle"><span class="wb_tr_ok">Multisonic IOT page</span></h4>
-</div><div id="wb_element_instance1" class="wb_element wb_element_picture"><img alt="gallery/logo" src="gallery_gen/dc5c264f449232610a1fd0e327489e90_50x60.png"></div><div id="wb_element_instance2" class="wb_element wb_element_picture"><img alt="gallery/logo" src="gallery_gen/dc5c264f449232610a1fd0e327489e90.png"></div></div><div class="wb_cont_outer"></div><div class="wb_cont_bg"></div></div>
-<div class="vbox wb_container" id="wb_main">
-	
-<div class="wb_cont_inner"><div id="wb_element_instance4" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance5" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance6" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance7" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance8" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance9" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance10" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance11" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">DATE</h1>
-</div><div id="wb_element_instance12" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><span style="color:rgba(0,0,0,1);"><?php echo $currentDate; ?></span></h3>
-</div><div id="wb_element_instance13" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">TIME</h1>
-</div><div id="wb_element_instance14" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">TEMP</h1>
-</div><div id="wb_element_instance15" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">HUMIDITY</h1>
-</div><div id="wb_element_instance16" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">PHCN</h1>
-</div><div id="wb_element_instance17" class="wb_element" style=" line-height: normal;"><h2 class="wb-stl-heading1" style="text-align: center;">Generator</h2>
-</div><div id="wb_element_instance18" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">Auxilliary</h1>
-</div><div id="wb_element_instance19" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><span style="color:rgba(0,0,0,1);"><?php echo $currentTime; ?></span></h3>
-</div><div id="wb_element_instance20" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><?php echo $sensorData1; ?></h3>
-</div><div id="wb_element_instance21" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><?php echo $sensorData2; ?></h3>
-</div><div id="wb_element_instance22" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><?php echo $sensorData4; ?></h3>
-</div><div id="wb_element_instance23" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><?php echo $sensorData5; ?></h3>
-</div><div id="wb_element_instance24" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><?php echo $sensorData6; ?></h3>
-</div><div id="wb_element_instance25" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance26" class="wb_element wb_element_shape"><div class="wb_shp"></div></div><div id="wb_element_instance27" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">BATTERY</h1>
-</div><div id="wb_element_instance28" class="wb_element" style=" line-height: normal;"><h1 class="wb-stl-heading1" style="text-align: center;">CURRENT</h1>
-</div><div id="wb_element_instance29" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><?php echo $sensorData7; ?></h3>
-</div><div id="wb_element_instance30" class="wb_element" style=" line-height: normal;"><h3 class="wb-stl-heading3" style="text-align: center;"><?php echo $sensorData3; ?></h3>
-</div><div id="wb_element_instance31" class="wb_element" style="width: 100%;">
-			<?php
-				global $show_comments;
-				if (isset($show_comments) && $show_comments) {
-					renderComments(1);
-			?>
-			<script type="text/javascript">
-				$(function() {
-					var block = $("#wb_element_instance31");
-					var comments = block.children(".wb_comments").eq(0);
-					var contentBlock = $("#wb_main");
-					contentBlock.height(contentBlock.height() + comments.height());
-				});
-			</script>
-			<?php
-				} else {
-			?>
-			<script type="text/javascript">
-				$(function() {
-					$("#wb_element_instance31").hide();
-				});
-			</script>
-			<?php
-				}
-			?>
-			</div></div><div class="wb_cont_outer"></div><div class="wb_cont_bg"></div></div>
-<div class="vbox wb_container" id="wb_footer">
-	
-<div class="wb_cont_inner" style="height: 139px;"><div id="wb_element_instance3" class="wb_element" style=" line-height: normal;"><p class="wb-stl-footer">© 2018 <a href="http://multisoniciot.000webhostapp.com">multisoniciot.000webhostapp.com</a></p></div><div id="wb_element_instance32" class="wb_element" style="text-align: center; width: 100%;"><div class="wb_footer"></div><script type="text/javascript">
-			$(function() {
-				var footer = $(".wb_footer");
-				var html = (footer.html() + "").replace(/^\s+|\s+$/g, "");
-				if (!html) {
-					footer.parent().remove();
-					footer = $("#wb_footer, #wb_footer .wb_cont_inner");
-					footer.css({height: ""});
-				}
-			});
-			</script></div></div><div class="wb_cont_outer"></div><div class="wb_cont_bg"></div></div><div class="wb_sbg"></div></div>{{hr_out}}</body>
-</html>
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
