@@ -157,7 +157,7 @@
       Health History
     </center>
     <div style="align-content: right">
-      <button class="button"><i class="fa fa-ad"></i> name=""></button>
+      <button class="button"><i class="fa fa-ad"></i> Fetch Patient</button>
     </div>
   </div>
 
