@@ -36,10 +36,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<?php require('icon8/plus.html')?>
 <script language="JavaScript" src="js/user.js">
 </script>
 
 </head>
+
+<style type="text/css">
+  #list-key{
+  display:inline-block;
+  margin-right:10px;
+} 
+#list-pair{
+  display:inline-block;
+}
+
+</style>
 <body id="top">
 
 <div class="wrapper row0">
@@ -66,22 +78,90 @@
 
 <?php require('partials/admin_manage_patient_header.html') ?>
 
-<div class="wrapper bgded overlay" style="background-image:url('hospital/1.jpg');">
-  <section id="testimonials" class="hoc container clear"> 
-   
-    <h2 class="font-x3 uppercase btmspace-80 underlined"> Doctor <a href="#"><?php echo $docName; ?></a></h2>
-    <ul class="nospace group">
+<div class="wrapper bgded overlay" style="background-image:url('hospital/manage.jpg');">
 
-       <li class="one_third">
+<div id="container" class="hoc clear container" style="width:100%;" class="row">                                   
+  <div id="left" style="float:left; width:50%;" align="left" class="col-xs-6"> 
+    <div class="row">
+      <div id="list-key">
+        <p><strong>Name:</strong></p>
+      </div>
+      <div id="list-pair">
+        <p>Oluwapelumi Olaoye</p>
+      </div>
+    </div>
+    <div class="row">
+      <div id="list-key">
+        <p><strong>Age:</strong></p>
+      </div>
+      <div id="list-pair">
+        <p><?php echo '12 ' . ' years'?></p>
+      </div>
+    </div>
+    <div class="row">
+        <div id="list-key">
+          <p><strong>Sex:</strong></p>
+        </div>
+        <div id="list-pair">
+          <p>Male</p>
+        </div>
+      </div>
+      <div class="row">
+        <div id="list-key">
+          <p><strong>Blood Group:</strong></p>
+        </div>
+        <div id="list-pair">
+          <p><?php echo 'Gropu ' . ' O'?></p>
+        </div>
+      </div>
+      <div class="row">
+      <div id="list-key">
+        <p><strong>Genotype:</strong></p>
+      </div>
+      <div id="list-pair">
+        <p>AA</p>
+      </div>
+    </div>
+  </div>                     
+  <div id="right" style="float:right; width:50%;">
+    <div class="row">
+      <div id="list-key">
+        <p><strong>Allegies:</strong></p>
+      </div>
+      <div id="list-pair">
+        <p>Apo ewa ati ogi tutu</p>
+      </div>
+    </div>
+    <div class="row">
+      <div id="list-key">
+        <p><strong>Address:</strong></p>
+      </div>
+      <div id="list-pair">
+        <p>No 5, ayeteru street, araromi community, Lagos State, Nigeria</p>
+      </div>
+    </div>
+    <div class="row">
+      <div id="list-key">
+        <p><strong>Phone:</strong></p>
+      </div>
+      <div id="list-pair">
+        <p>08035568494</p>
+      </div>
+    </div>
+  </div>                   
+  </div>
 
-          <blockquote>The doctor can view patients medical history here. The doctor can also add their own diagnosis on the patient </blockquote>
-        
-      </li> 
+  <!-- Health History -->
+  <div id="container" class="hoc clear container row" style="width:100%;">
+    <center>
+      Health History
+    </center>
+    <div style="align-content: right">
+      <button class="button"><i class="fa fa-ad"></i> name=""></button>
+    </div>
+  </div>
 
-    </ul>
-   
-  </section>
-</div>
+  </div>
 
 <?php require('partials/admin_footer.html')?>
 
