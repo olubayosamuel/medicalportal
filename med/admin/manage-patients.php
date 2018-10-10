@@ -4,11 +4,17 @@
   require('../db.php');
   if($_SESSION) {
     $log1 = $_SESSION['log1'];
-    $patient_id = $_SESSION['patient-id'];
   }
+
   $health_history = mysqli_query($con, "SELECT * FROM healthhistory");
+
+  $patient_reg_id = mysqli_query($con, "SELECT * FROM `validateprint`");
+  $patient_reg_id = mysqli_fetch_array($patient_reg_id);
+  $patient_reg_id_number = $patient_reg_id['print_id'];
+
   //Fetch patient details.
-  $patient = mysqli_query($con, "SELECT * FROM patients WHERE `patient_id`=$patient_id");
+  $patient = mysqli_query($con, "SELECT * FROM patients WHERE `patient_reg_id`=$patient_reg_id_number");
+  $patient = mysqli_fetch_array($patient);
 ?>
 
 <?php
@@ -219,7 +225,10 @@
 
   </div>
 
-<?php require('partials/admin_footer.html')?>
+  <?php 
+  //Set patient registration id number back to 0.
+  mysqli_query($con,"UPDATE validateprint SET print_id = 0 Where id = 1" );
+  ?>
 
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 

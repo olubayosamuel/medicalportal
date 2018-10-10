@@ -10,10 +10,14 @@ foreach($_REQUEST as $key => $value){
   $print_id = $value;
   }
 
-}//for each
+}
 
-
-mysqli_query($con,"UPDATE validateprint SET status = '{$powerStatus}' , print_id='{$print_id}' WHERE id = 1 ");
+$fetch_result = mysqli_query($con,"UPDATE validateprint SET status = '{$powerStatus}' , print_id='{$print_id}' WHERE id = 1 ");
+if ($fetch_result) {
+  echo 'I got here first';
+} else {
+  echo 'I didn\'t get here';
+}
 echo "successfully verified patient with Id number: {$print_id} <br/>";
 
 date_default_timezone_set('Africa/Lagos');

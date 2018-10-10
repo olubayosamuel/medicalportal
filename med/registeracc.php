@@ -97,7 +97,7 @@
   <td style="color:#000000"; width="120" >patient's ID number</td>
   <td style="color:#000000"; width="6">:</td>
   <td style="color:#000000"; width="294"><input name="voter_num" type="text" required="required" ></td>
-  </tr>
+  </tr>''
 
 	<tr>
 	<td>&nbsp;</td>

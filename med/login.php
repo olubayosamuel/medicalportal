@@ -18,9 +18,8 @@ require('db.php');
     $message = "Device online, place the patient's thumb on the scanner";
   }
   if ($patientID != 0 ) {
-    $_SESSION['patient-id'] = $patientID;
-        redirect('admin/manage-patient.php');
-        exit;
+      redirect('admin/manage-patients.php');
+      exit;
   }
   ?>
 
@@ -67,14 +66,6 @@ require('db.php');
     <ul class="nospace group">
       <li class="one_half">
         
-
-<?php
-echo "<h2>" . $message . "</h2>";
-if($patientID != 0){
-    mysqli_query($con,"UPDATE validatePrint SET patient_id = 0");
-    header("Location: admin/admin.php");
-}
-?>
 
 <table style="background-color:blue;" width="300" border="0" align="center" cellpadding="0" cellspacing="1">
     <tr>
