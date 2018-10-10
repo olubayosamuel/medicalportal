@@ -34,9 +34,9 @@
 <title>NHIS portal</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <a href="https://icons8.com">Icon pack by Icons8</a>
 
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<?php require('icon8/plus.html')?>
 <script language="JavaScript" src="js/user.js">
 </script>
 
@@ -111,7 +111,7 @@
           <p><strong>Blood Group:</strong></p>
         </div>
         <div id="list-pair">
-          <p><?php echo 'Gropu ' . ' O'?></p>
+          <p><?php echo 'Group ' . ' O'?></p>
         </div>
       </div>
       <div class="row">

@@ -75,7 +75,7 @@
   	echo "<center><h3>Register an account by filling in the needed information below:</h3></center>";
   ?>
 </div> 
-		<table style="background-color:powderblue;" width="300" border="0" align="center" cellpadding="0" cellspacing="1">
+		<table style="background-color:powderblue;" width="50%" border="0" align="center" cellpadding="0" cellspacing="1">
 <tr>
 <form name="form1" method="post" action="registeracc.php" onSubmit="return registerValidate(this)">
 <td>
