@@ -124,7 +124,7 @@ function myFunction() {
    
     <h2 class="font-x3 uppercase btmspace-80 underlined"> Registered Patients</h2>
 
-    <div class="nospace">
+    <div class="nospace" style="color: #000000">
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for patients by name..">
     </div>
 

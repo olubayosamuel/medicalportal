@@ -4,9 +4,11 @@
   require('../db.php');
   if($_SESSION) {
     $log1 = $_SESSION['log1'];
-    $docName = $_SESSION['docName'];
+    $patient_id = $_SESSION['patient-id'];
   }
-  
+  $health_history = mysqli_query($con, "SELECT * FROM healthhistory");
+  //Fetch patient details.
+  $patient = mysqli_query($con, "SELECT * FROM patients WHERE `patient_id`=$patient_id");
 ?>
 
 <?php
@@ -37,6 +39,37 @@
     <a href="https://icons8.com">Icon pack by Icons8</a>
 
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+        #myInput {
+            background-position: 10px 10px;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            padding: 20px 20px 20px 20px;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        #myTable th, #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #myTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 <script language="JavaScript" src="js/user.js">
 </script>
 
@@ -87,7 +120,7 @@
         <p><strong>Name:</strong></p>
       </div>
       <div id="list-pair">
-        <p>Oluwapelumi Olaoye</p>
+        <p><?php echo $patient['firstname'] . " " . $patient['lastname']?></p>
       </div>
     </div>
     <div class="row">
@@ -95,7 +128,7 @@
         <p><strong>Age:</strong></p>
       </div>
       <div id="list-pair">
-        <p><?php echo '12 ' . ' years'?></p>
+        <p><?php echo $patient['age'] . ' years'?></p>
       </div>
     </div>
     <div class="row">
@@ -103,7 +136,7 @@
           <p><strong>Sex:</strong></p>
         </div>
         <div id="list-pair">
-          <p>Male</p>
+          <p><?php echo $patient['sex']?></p>
         </div>
       </div>
       <div class="row">
@@ -111,7 +144,7 @@
           <p><strong>Blood Group:</strong></p>
         </div>
         <div id="list-pair">
-          <p><?php echo 'Group ' . ' O'?></p>
+          <p><?php echo $patient['bloodgroup']?></p>
         </div>
       </div>
       <div class="row">
@@ -119,7 +152,7 @@
         <p><strong>Genotype:</strong></p>
       </div>
       <div id="list-pair">
-        <p>AA</p>
+        <p><?php echo $patient['genotype']?></p>
       </div>
     </div>
   </div>                     
@@ -129,7 +162,7 @@
         <p><strong>Allegies:</strong></p>
       </div>
       <div id="list-pair">
-        <p>Apo ewa ati ogi tutu</p>
+        <p><?php echo $patient['allegies']?></p>
       </div>
     </div>
     <div class="row">
@@ -137,7 +170,7 @@
         <p><strong>Address:</strong></p>
       </div>
       <div id="list-pair">
-        <p>No 5, ayeteru street, araromi community, Lagos State, Nigeria</p>
+        <p><?php echo $patient['address']?></p>
       </div>
     </div>
     <div class="row">
@@ -145,7 +178,7 @@
         <p><strong>Phone:</strong></p>
       </div>
       <div id="list-pair">
-        <p>08035568494</p>
+        <p><?php echo $patient['phone']?></p>
       </div>
     </div>
   </div>                   
@@ -154,12 +187,35 @@
   <!-- Health History -->
   <div id="container" class="hoc clear container row" style="width:100%;">
     <center>
-      Health History
+        <div class="row">
+            <div>
+                <p><strong>Health History</strong></p>
+            </div>
+            <div style="align-content: right">
+                <button class="btn"><i class="fa fa-ad"></i> Fetch Patient</button>
+            </div>
+        </div>
     </center>
-    <div style="align-content: right">
-      <button class="button"><i class="fa fa-ad"></i> Fetch Patient</button>
-    </div>
   </div>
+    <div class="nospace">
+        <table id="myTable" style="background-color:powderblue;" width="100%" border="0" cellpadding="3" cellspacing="1" >
+            <tr>
+                <th style="color:#000000"; width="200" >Doctor's Name</td>
+                <th style="color:#000000"; width="6">Tests Description</td>
+                <th style="color:#000000"; width="6">Test Document</td>
+            </tr>
+
+            <?php
+            while ($history = mysqli_fetch_array($health_history)) {
+                echo '<tr>
+              <td style="color:#000000"; width="200" >' . $history['docname'] . '</td>
+              <td style="color:#000000"; width="6">' . $history['description'] . '</td>
+              <td style="color:#000000"; width="6">' . $history['link'] . '</td>
+          </tr>';
+            }
+            ?>
+        </table>
+    </div>
 
   </div>
 

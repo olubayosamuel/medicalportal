@@ -85,86 +85,25 @@ else
 
 <div class="wrapper bgded overlay" style="background-image:url('hospital/manage.jpg');">
 
-    <div id="container" class="hoc clear container" style="width:100%;" class="row">
-        <div id="left" style="float:left; width:50%;" align="left" class="col-xs-6">
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Name:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p>Oluwapelumi Olaoye</p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Age:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p><?php echo '12 ' . ' years'?></p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Sex:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p>Male</p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Blood Group:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p><?php echo 'Group ' . ' O'?></p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Genotype:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p>AA</p>
-                </div>
+    <center>
+        <form name=patient action="FetchPatientById.php" method="post">
+            <input type="submit" value="Go to Login">
+        </form>
+        <div class="row">
+            <div class="input-container">
+                <input name="patientId"  type="text" required="required"/>
+                <label>Patient Id</label>
+                <span class="validationMessage"> Enter the id of the patient to fetch </span>
+                <div class="bar"></div>
             </div>
         </div>
-        <div id="right" style="float:right; width:50%;">
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Allegies:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p>Apo ewa ati ogi tutu</p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Address:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p>No 5, ayeteru street, araromi community, Lagos State, Nigeria</p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="list-key">
-                    <p><strong>Phone:</strong></p>
-                </div>
-                <div id="list-pair">
-                    <p>08035568494</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Health History -->
-    <div id="container" class="hoc clear container row" style="width:100%;">
-        <center>
-            Health History
-        </center>
-        <div style="align-content: right">
-            <button class="button"><i class="fa fa-ad"></i> name=""></button>
+        <div class="button-container">
+
+            <button name="Submit"><span>Fetch Patient</span></button>
+
         </div>
-    </div>
+    </center>
 
 </div>
 
