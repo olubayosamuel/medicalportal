@@ -75,3 +75,10 @@ margin:0 auto;
 margin-top:20px;
 background:#f9dec7;
 }
+#list-key{
+	display:inline-block;
+	margin-right:10px;
+} 
+#list-pair{
+	display:inline-block;
+}

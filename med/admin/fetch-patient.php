@@ -6,6 +6,7 @@
     $log1 = $_SESSION['log1'];
     $docName = $_SESSION['docName'];
   }
+  $patients = mysqli_query($con, "SELECT * FROM patients");
   
 ?>
 
@@ -35,9 +36,61 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <script language="JavaScript" src="js/user.js">
 </script>
+
+<style type="text/css">
+#myInput {
+  background-position: 10px 10px;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
 
 </head>
 <body id="top">
@@ -66,20 +119,46 @@
 
 <?php require('partials/admin_welcome_header.html') ?>
 
-<div class="wrapper bgded overlay" style="background-image:url('hospital/1.jpg');">
+<div class="wrapper bgded overlay" style="background-image:url('hospital/manage.jpg');">
   <section id="testimonials" class="hoc container clear"> 
    
-    <h2 class="font-x3 uppercase btmspace-80 underlined"> Doctor <a href="#"><?php echo $docName; ?></a></h2>
-    <ul class="nospace group">
+    <h2 class="font-x3 uppercase btmspace-80 underlined"> Registered Patients</h2>
 
-       <li class="one_third">
+    <div class="nospace" style="color: #000000">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for patients by name..">
+    </div>
 
-          <blockquote>The doctor can view patients medical history here. The doctor can also add their own diagnosis on the patient </blockquote>
-        
-      </li> 
+    <div class="nospace">
+      <table id="myTable" style="background-color:powderblue;" width="100%" border="0" cellpadding="3" cellspacing="1" >
+        <tr>
+        <th style="color:#000000"; width="200" >Full Name</td>
+        <th style="color:#000000"; width="6">Age</td>
+        <th style="color:#000000"; width="6">Sex</td>
+        <th style="color:#000000"; width="120">Blood Group</td>
+        <th style="color:#000000"; width="50">Genotype</td>
+        <th style="color:#000000"; width="70">Allegies</td>
+        <th style="color:#000000"; width="120">Address</td>
+        <th style="color:#000000"; width="50">Phone</td>
 
-    </ul>
-   
+        </tr>
+
+        <?php
+          while ($patient = mysqli_fetch_array($patients)) {
+            echo '<tr>
+              <td style="color:#000000"; width="200" >' . $patient['firstname'] . " " . $patient['lastname'] . '</td>
+              <td style="color:#000000"; width="6">' . $patient['age'] . '</td>
+              <td style="color:#000000"; width="6">' . $patient['sex'] . '</td>
+              <td style="color:#000000"; width="120">' . $patient['bloodgroup'] . '</td>
+              <td style="color:#000000"; width="50">' . $patient['genotype'] . '</td>
+              <td style="color:#000000"; width="70">' . $patient['allegies'] . '</td>
+              <td style="color:#000000"; width="200">' . $patient['address'] . '</td>
+              <td style="color:#000000"; width="50">' . $patient['phone'] . '</td>
+          </tr>';
+          }
+        ?>
+    </table>
+    </div>
+
   </section>
 </div>
 

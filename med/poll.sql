@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 02, 2018 at 02:45 PM
+-- Generation Time: Oct 09, 2018 at 10:18 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -21,6 +21,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `poll`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patients`
+--
+
+DROP TABLE IF EXISTS `patients`;
+CREATE TABLE IF NOT EXISTS `patients` (
+  `patient_id` int(10) NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `age` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `bloodgroup` varchar(45) NOT NULL,
+  `genotype` varchar(45) NOT NULL,
+  `allegies` varchar(128) NOT NULL,
+  `address` varchar(128) NOT NULL,
+  `phone` varchar(45) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `patients`
+--
+
+INSERT INTO `patients` (`patient_id`, `firstname`, `lastname`, `age`, `sex`, `bloodgroup`, `genotype`, `allegies`, `address`, `phone`) VALUES
+(2, 'ayomiposi', 'Oluwasunmisola', '29', 'male', 'Group B', 'AA', 'Cooked beans', 'No 5, ayeteru street, araromi community, Lagos State, Nigeria', '07033902535'),
+(1, 'oluwapelumi', 'olubayo', '12', 'female', 'Group O', 'AS', 'Sucrose intolerance', 'No 5, igbalaye street, Osun State, Nigeria', '07069441260');
 
 -- --------------------------------------------------------
 
@@ -84,24 +112,6 @@ INSERT INTO `tbcandidates` (`candidate_id`, `candidate_name`, `candidate_positio
 (18, 'sampam', 'Executive-Officer', 1),
 (19, 'mary', 'Executive-Officer', 0);
 
-
-------------------------------------------
---
--- Table structure for patient table
---
-------------------------------------------
-DROP TABLE IF EXISTS `patients`;
-CREATE TABLE IF NOT EXISTS `patients` (
-  `firstname` varchar(50) NON NULL,
-  `lastname` varchar (50) NON NULL,
-  `age` varchar (50) NON NULL,
-  `sex` varchar (50) NON NULL,
-  `bloodgroup` varchar (50) NON NULL,
-  `genotype` varchar (50) NON NULL,
-  `allegies` varchar (50) NULLABLE,
-  `address` varchar (50) NON NULL,
-  `phone` varchar (50) NON NULL,
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1
 -- --------------------------------------------------------
 
 --
